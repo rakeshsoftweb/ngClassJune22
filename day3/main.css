@@ -1,0 +1,35 @@
+.active
+{
+    /* background-color: blue !important;
+    color:white !important; */
+    border-bottom: 3px solid red !important;
+}
+li{
+    list-style: none;
+}
+.side-bar-sel-btn
+{
+    border: 1px solid #cbc2c2;
+}
+
+p
+{
+    color: blue;
+    font-size: 40px;
+}
+
+.para2{
+    color:red;
+}
+
+h1{
+    background-color: yellow;;
+    color:red;
+    font-weight: bold;
+}
+
+#fullname {
+    background-color: lightgreen;
+    color:red;
+    font-weight: bold;
+}
