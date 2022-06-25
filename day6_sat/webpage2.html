@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+// array data store on index no which start from 0
+let arrColors = ["red","green","blue","yellow","white","black"];
+console.log(arrColors.length);
+// for(let i=0; i<arrColors.length; i++)
+// {
+//     console.log("loop color name : ", arrColors[i])
+// }
+
+// let i=0;
+// while(i<arrColors.length)
+// {
+//     console.log("While loop Color Name " , arrColors[i]);
+//     i++;
+// }
+
+
+// es6 javascript helpers
+// arrColors.forEach(function(item,index){
+//     console.log("Item ", item, " Index ", index)
+// })
+// console.log("forEach with Arrow Function ");
+// arrColors.forEach((item,index)=>{
+//     console.log("Item ", item, " Index ", index)
+// })
+
+// console.log("forEach with Arrow Function single paramter ");
+// arrColors.forEach(item=>{
+//     console.log("Item ", item);
+// })
+
+// forEach, map, filter
+
+// can not return data
+let Result1 = arrColors.forEach(item=>{
+    // console.log("forEach Item ", item);
+    return item;
+})
+console.log(Result1);
+// it return data
+// we can change value during return
+let Result2 = arrColors.map(item=>{
+    // console.log("map Item ", item);
+    return "color Name : " + item;
+})
+console.log(Result2);
+// it return data
+// we can not change value during return
+let Result3 = arrColors.filter(item=>{
+    // console.log("filter Item ", item);
+    console.log(item.length<=5);
+    return item.length<=5;
+})
+console.log(Result3);
+
+</script>
