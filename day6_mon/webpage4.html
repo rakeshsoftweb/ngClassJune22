@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+</body>
+
+</html>
+<script>
+    console.log("start Javascript");
+    let Prom1 = new Promise((Resolve, Reject) => {
+        console.log("Prom1 is executed");
+        setTimeout(() => {
+            Resolve("Prom1 is Resolved");
+        }, 5000)
+    })
+    let Prom2 = new Promise((Resolve, Reject) => {
+        console.log("Prom2 is executed");
+        setTimeout(() => {
+            Resolve("Prom2 is Resolved");
+        }, 2000)
+    })
+
+    let Prom3 = new Promise((Resolve, Reject) => {
+        console.log("Prom3 is executed");
+        setTimeout(() => {
+            // Resolve("Prom3 is Resolved");
+            Reject("Prom3 is Rejected");
+        }, 4000)
+    })
+
+    Promise.all([Prom1, Prom2, Prom3]).then(data=>{
+        console.log("All promise Result ", data);
+    }).catch(err=>{
+        console.log("Error ", err);
+    })
+
+    console.log("end Javascript");
+</script>

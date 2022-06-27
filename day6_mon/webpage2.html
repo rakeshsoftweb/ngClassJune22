@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Connecting Server </h1>
+    <img src="Spinner-3.gif" id="dataloader"/>
+</body>
+</html>
+<script>
+    console.log("start Javascript");
+    var Resp = true;
+    let prom = new Promise((Resolve, Reject) => {
+        if (Resp) {
+            setTimeout(() => {
+                Resolve("API data access successfully");
+            }, 5000)
+        } else {
+            Reject("API data not responding !");
+        }
+    })
+    prom.then(data => {
+        console.log("then : ", data);
+        document.getElementById("dataloader").style.display ='none';
+    })
+    .catch(err=>{
+        console.log("Error ", err);
+    })
+
+    console.log("end Javascript");
+</script>
