@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+</body>
+</html>
+<script>
+function Employee(eid, ename,salary)
+{
+    this.employeeId = eid;
+    this.employeeName = ename;
+    this.employeeSalary = salary;
+}
+Employee.prototype.Company = 'ABC 1 Pvt Ltd';
+
+var Result = new Employee(123,"Rahul Sharma",99999);
+Result.status ='Active';
+// Result.Company ='ABC 1 Pvt Ltd';
+console.log(Result.employeeId);
+console.log(Result.Company);
+
+var Result2 = new Employee(124,"Raman Kumar",88888);
+Result2.status ='disabled';
+// Result2.Company ='ABC 1 Pvt Ltd';
+console.log(Result2.employeeId);
+console.log(Result2.Company);
+
+</script>

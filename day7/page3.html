@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li class="btn btn-primary">HTML</li>
+        <li class="btn btn-primary">CSS</li>
+        <li class="btn btn-primary">JavaScript</li>
+        <li class="btn btn-primary">Angular</li>
+    </ul>    
+</body>
+</html>
+
+<script>
+    let EleLI = document.getElementsByClassName('btn btn-primary');
+    console.log(EleLI);
+    for(let i=0; i<EleLI.length;i++)
+    {
+       console.log(EleLI[i].innerHTML);
+       EleLI[i].addEventListener("click",function(){
+        console.log("Event binded");
+       });
+    }
+
+    // function Display()
+    // {
+    //     console.log("Display ");
+    // }
+</script>
+
