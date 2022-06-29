@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <button class="btn btn-success" onclick="ServerStart()">Server Start</button>
+        <button class="btn btn-danger" onclick="ServerStop()">Server Stop</button>
+    </div>
+    <div>
+        <button class="btn btn-primary" onclick="onLoad()">Load</button>
+    </div>
+    <img id="loader" src="./Spinner-3.gif" />
+    <img id="mobile2" src="./mobile2.png" width="30%" alt="mobile" />
+    <p id="msg"></p>
+</body>
+
+</html>
+<script>
+
+    document.getElementById("mobile2").style.display = 'none';
+    document.getElementById("loader").style.display = 'none';
+    var ServerStatus = false;
+    function ServerStart() {
+        ServerStatus = true;
+    }
+    function ServerStop() {
+        ServerStatus = false;
+    }
+
+    function onLoad() {
+        document.getElementById("loader").style.display = 'block';
+        document.getElementById("msg").innerHTML = "";
+        var prom = new Promise((Resolve, Reject) => {
+            if (ServerStatus) {
+                setTimeout(() => {
+                    Resolve("Resolved");
+                }, 3000)
+            }
+            else {
+                setTimeout(() => {
+                    Reject("Server not responding ");
+                }, 2000)
+            }
+
+        })
+        prom.then(data => {
+            document.getElementById("loader").style.display = 'none';
+            document.getElementById("mobile2").style.display = 'inline-block';
+            document.getElementById("msg").innerHTML = "";
+        }).catch(err => {
+            document.getElementById("loader").style.display = 'none';
+            document.getElementById("msg").innerHTML = "Error " + err;
+        })
+    }
+
+
+</script>

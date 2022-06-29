@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>    
+    <img id="loader" src="./Spinner-3.gif"/>
+    <img id="mobile2" src="./mobile2.png" width="30%" alt="mobile"/>
+    <p id="msg"></p>
+</body>
+</html>
+<script>
+document.getElementById("mobile2").style.display ='none';
+var prom = new Promise((Resolve, Reject)=>{
+    // api access 
+        // Resolve("Resolved");
+    // Response success status code  : 200
+    // Response is not responding status code  : 500
+    setTimeout(()=>{
+        Resolve("Resolved");
+    },5000)    
+    // setTimeout(()=>{
+    //     Reject("Server not responding ");
+    // },2000)  
+})
+prom.then(data=>{
+    document.getElementById("loader").style.display ='none';
+    document.getElementById("mobile2").style.display ='inline-block';
+}).catch(err=>{
+    document.getElementById("loader").style.display ='none';
+    document.getElementById("msg").innerHTML = "Error " + err;
+})
+
+</script>
