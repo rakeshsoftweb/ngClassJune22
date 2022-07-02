@@ -1,0 +1,18 @@
+
+laptop
+OS : windows
+1. editor 
+2. Node.js
+3. Angular CLI
+start
+Files used in Angular project
+configuration : .json, ts, js
+development : .html, .css , .ts + design pattern decorator, DI.....others
+build process compile and convert into js from TS
+deployment : we make build : .html, .css .js
+
+CLI : command line interface
+
+@Input('ABC')
+
+var abc = new ABC()
