@@ -1,0 +1,13 @@
+<div>
+    <h5>Display 6 </h5>
+    <table class="table table-striped">
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Designation</th>
+        <tr *ngFor="let employee of arrEmployees">
+            <td>{{employee.empid}}</td>
+            <td>{{employee.empname}}</td>
+            <td>{{employee.designation}}</td>
+        </tr>
+    </table>
+</div>
