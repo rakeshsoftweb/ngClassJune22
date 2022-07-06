@@ -1,0 +1,14 @@
+<p>display 9 ngClass</p>
+<ul>
+    <li *ngFor="let user of arrUsers" >
+        <span *ngIf="user.status ==='active'" class="bg-success text-white">{{user.userid}}</span>
+        <span *ngIf="user.status ==='disabled'" class="bg-danger text-white">{{user.userid}}</span>
+    </li>
+</ul>
+
+
+<ul>
+    <li *ngFor="let user of arrUsers" >
+        <span [ngClass]="{'bg-success': user.status==='active','bg-danger': user.status ==='disabled'}">{{user.userid}}</span>
+   </li>
+</ul>

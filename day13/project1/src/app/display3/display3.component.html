@@ -1,0 +1,13 @@
+<div class="form-group">
+    <label>Full Name</label>
+    <input type="text" class="form-control" [(ngModel)]="fullname" />
+</div>
+<div class="form-group">
+    Full Name : {{fullname}}
+</div>
+<div class="form-group">
+    Full Name Length: {{fullname.length}}
+</div>
+<div>
+    <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+</div>

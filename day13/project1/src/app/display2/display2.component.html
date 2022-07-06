@@ -1,0 +1,11 @@
+<p>Angular DOM </p>
+<div class="form-group">
+    <label>Full Name</label>
+    <input type="text" #fullname class="form-control"/>
+</div>
+<div>
+    Full Name :  {{fullname.value}}
+</div>
+<div>
+    <button class="btn btn-success" (click)="onSubmit(fullname)">Submit</button>
+</div>
