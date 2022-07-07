@@ -1,0 +1,52 @@
+<!-- <p>display2 ngClass Directive using dynamic data sample</p>
+<table class="table table-striped table-sm">
+    <th>S.No.</th>
+    <th>Order Date</th>
+    <th>Product</th>
+    <th>Qty</th>
+    <th>Status</th>
+    <tr *ngFor="let orderdata of arrOrdersData">
+        <td>{{orderdata.sno}}</td>
+        <td>{{orderdata.orderdate}}</td>
+        <td>{{orderdata.product}}</td>
+        <td>{{orderdata.qty}}</td>
+        <td>{{orderdata.status}}</td>
+    </tr>
+</table> -->
+<!-- 
+<p>display2 ngClass Directive using dynamic data sample</p>
+<table class="table table-striped table-sm">
+    <th>S.No.</th>
+    <th>Order Date</th>
+    <th>Product</th>
+    <th>Qty</th>
+    <th>Status</th>
+    <tr *ngFor="let orderdata of arrOrdersData">
+        <td>{{orderdata.sno}}</td>
+        <td>{{orderdata.orderdate}}</td>
+        <td>{{orderdata.product}}</td>
+        <td>{{orderdata.qty}}</td>
+        <td *ngIf="orderdata.status==='delivered'"><span class="bg-success">{{orderdata.status}}</span></td>
+        <td *ngIf="orderdata.status==='pending'"><span  class="bg-danger">{{orderdata.status}}</span></td>
+        <td *ngIf="orderdata.status==='rejected'"><span  class="bg-warning">{{orderdata.status}}</span></td>
+    </tr>
+</table> -->
+
+
+<p>display2 ngClass Directive using dynamic data sample</p>
+<table class="table table-striped table-sm">
+    <th>S.No.</th>
+    <th>Order Date</th>
+    <th>Product</th>
+    <th>Qty</th>
+    <th>Status</th>
+    <tr *ngFor="let orderdata of arrOrdersData">
+        <td>{{orderdata.sno}}</td>
+        <td>{{orderdata.orderdate}}</td>
+        <td>{{orderdata.product}}</td>
+        <td>{{orderdata.qty}}</td>
+        <td><span [ngClass] ="{'bg-success':orderdata.status==='delivered', 'bg-danger':orderdata.status==='pending','bg-warning':orderdata.status==='rejected' }">{{orderdata.status}}</span></td>
+    </tr>
+</table>
+
+

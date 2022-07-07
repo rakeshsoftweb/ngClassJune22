@@ -1,0 +1,31 @@
+<p>display1 ngClass</p>
+<!-- <div>
+    <h1 class="bg-primary text-white">Header 1</h1>
+    <h1 [ngClass]="{'bg-primary':true}">Header 2</h1>
+    <h1 [ngClass]="{'bg-primary':false}">Header 3</h1>
+</div> -->
+
+<!-- <div>
+    <h1 class="bg-primary text-white">Header 1</h1>
+    <h1 [ngClass]="{'bg-primary':hdr1}">Header 2</h1>
+    <h1 [ngClass]="{'bg-primary':hdr1}">Header 3</h1>
+    <h1 [ngClass]="{'bg-primary':!hdr1}">Header 4</h1>
+</div> -->
+
+<!-- <div>
+    <h1 class="bg-primary text-white">Header 1</h1>
+    <h1 [ngClass]="{'bg-danger':hdr1}">Header 2</h1>
+    <h1 [ngClass]="{'bg-danger':hdr1}">Header 3</h1>
+    <h1 [ngClass]="{'bg-danger':hdr1}">Header 4</h1>
+    <p>hdr1 : {{hdr1}}</p>
+    <button (click)="onHdr1Change()">Toggle</button>
+</div> -->
+
+<div>
+    <h1 class="bg-primary text-white">Header 1</h1>
+    <h1 [ngClass]="{'bg-danger':hdr1, 'bg-success':!hdr1}">Header 2</h1>
+    <h1 [ngClass]="{'bg-danger':hdr1, 'bg-success':!hdr1}">Header 3</h1>
+    <h1 [ngClass]="{'bg-danger':hdr1, 'bg-success':!hdr1}">Header 4</h1>
+    <p>hdr1 : {{hdr1}}</p>
+    <button (click)="onHdr1Change()">Toggle</button>
+</div>
