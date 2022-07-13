@@ -1,0 +1,15 @@
+<div class="form-group">
+    <label>Search Name</label>
+    <input type="text" class="form-control" [(ngModel)]="textSearch"/>
+</div>
+{{textSearch}}
+<table class="table table-striped">
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Gender</th>
+    <tr *ngFor="let emp of arrEmployee | empfilter:textSearch">
+        <td>{{emp.empid}}</td>
+        <td>{{emp.empname}}</td>
+        <td>{{emp.gender | gender}}</td>
+    </tr>
+</table>

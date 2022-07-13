@@ -1,0 +1,12 @@
+<p>Pipe Gender in Loop</p>
+
+<table class="table table-striped">
+    <th>Employee Id</th>
+    <th>Employee Name</th>
+    <th>Gender</th>
+    <tr *ngFor="let emp of arrEmployee">
+        <td>{{emp.empid}}</td>
+        <td>{{emp.empname}}</td>
+        <td>{{emp.gender | gender}}</td>
+    </tr>
+</table>
