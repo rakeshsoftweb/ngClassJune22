@@ -1,0 +1,9 @@
+<div>
+    <p>display1 works!</p>
+    <h5>Counter Value : {{count}}</h5>
+    <button (click)="onCounterHandler()">Counter</button>
+    <button (click)="onDestroyHandler()">Destroy Child </button>
+</div>
+<div>
+    <app-display2 *ngIf="childShow" [propCounter]="count"></app-display2>
+</div>
