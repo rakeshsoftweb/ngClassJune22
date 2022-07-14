@@ -12,9 +12,9 @@ export class Display2Component implements OnInit  {
    }
 
    ngOnChanges(changes: SimpleChanges) {
-    console.log("Display 2 ngOnChanges");
+    console.log("Display 2 ngOnChanges", changes);
     const { CounterValue } = changes;
-    console.log(CounterValue?.currentValue, CounterValue?.previousValue);
+    console.log(CounterValue.currentValue, CounterValue.previousValue);
   }
 
   ngOnInit(): void {
@@ -23,7 +23,6 @@ export class Display2Component implements OnInit  {
    ngOnDestroy()
    {
     console.log("Display 2 ngOnDestroy");
-   }
-  
+   }  
 
 }
