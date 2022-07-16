@@ -1,0 +1,19 @@
+<p>Validation</p>
+<form [formGroup]="frmEmployee" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Employee Name</label>
+        <input type="text" class="form-control" formControlName="employeename" />
+        <span class="alert-danger" *ngIf="frmEmployee.controls['employeename'].hasError('required')">Employee Name Required</span>
+        <span class="alert-danger" *ngIf="frmEmployee.controls['employeename'].hasError('minlength')">Name Required 4 Character</span>
+        <span class="alert-danger" *ngIf="frmEmployee.controls['employeename'].hasError('maxlength')">Name can have max 10 Character</span>
+    </div>
+    <div>
+        <label>Pincode</label>
+        <input type="text" class="form-control" formControlName="pincode" />
+        <span class="alert-danger" *ngIf="frmEmployee.controls['pincode'].hasError('pattern')">Digit Only</span>
+    </div>
+    <div>
+        <button class="btn btn-success" type="Submit">Submit</button>
+    </div>
+</form>
+

@@ -1,0 +1,26 @@
+<form [formGroup]="frmClient" (ngSubmit)="onSubmit(frmClient.value)">
+    <div class="form-group">
+        <label>Client Id</label>
+        <input type="text" class="form-control" formControlName="id"/>
+        <span class="alert-danger" *ngIf="frmClient.controls['id'].hasError('required')">Client Id Required</span>
+    </div>
+    <div class="form-group">
+        <label>Client Name</label>
+        <input type="text" class="form-control" formControlName="clientname"/>
+        <span class="alert-danger" *ngIf="frmClient.controls['clientname'].hasError('required')">Client Name Required</span>
+    </div>
+    <div class="form-group">
+        <label>Address</label>
+        <input type="text" class="form-control" formControlName="address"/>
+        <span class="alert-danger" *ngIf="frmClient.controls['address'].hasError('required')">Address Required</span>
+    </div>
+    <div class="form-group">
+        <label>Phone</label>
+        <input type="text" class="form-control" formControlName="phone"/>
+        <span class="alert-danger" *ngIf="frmClient.controls['phone'].hasError('required')">Phone Required</span>
+    </div>
+    <div class="form-group">
+       <button class="btn btn-success">Submit</button>
+    </div>
+    
+</form>
