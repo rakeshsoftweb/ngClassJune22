@@ -1,0 +1,20 @@
+<h5>Employee List</h5>
+<div class="row">
+    <div class="col-6">
+        <table class="table table-striped">
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+            <th>Status</th>
+            <tr *ngFor="let employee of EmployeesData">
+                <td>{{employee.employeeid}}</td>
+                <td>{{employee.employeename}}</td>
+                <td>{{employee.designation}}</td>
+                <td>{{employee.status}}</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-6">
+        <app-addemployee (EventEmpUpdate)="onEmployeeUpdate($event)"></app-addemployee>
+    </div>
+</div>

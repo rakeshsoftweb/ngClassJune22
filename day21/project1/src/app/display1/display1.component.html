@@ -1,0 +1,24 @@
+<h5>Employee Data</h5>
+<div>
+    <table class="table">
+        <thead>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Designation</th>
+        </thead>
+       <tbody *ngFor="let employees of EmployeesData">
+        <tr >
+            <td>{{employees.eid}}</td>
+            <td>{{employees.ename}}</td>
+            <td>{{employees.designation}}</td>
+            <td><button class="btn btn-info text-white" (click)="onDetails(employees.eid)">Details</button></td>
+        </tr>
+        <tr *ngIf="selectedEmpId === employees.eid">
+            <td colspan="4">
+                <app-display1det [PropEmp]="employees"></app-display1det>
+            </td>
+        </tr>
+       </tbody>
+        
+    </table>
+</div>
