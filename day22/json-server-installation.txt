@@ -1,0 +1,25 @@
+ref link 
+https://www.npmjs.com/package/json-server
+
+json-server
+
+installation by npm at command level
+
+npm i -g json-server
+
+
+make a database server folder
+create a file named client.json
+
+how to a json-server 
+
+at command prompt
+json-server client.json
+
+you can open in browser 
+
+
+
+
+
+

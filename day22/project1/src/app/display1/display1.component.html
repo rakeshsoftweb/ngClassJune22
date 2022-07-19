@@ -1,0 +1,34 @@
+<form [formGroup]="frmContact" (ngSubmit)="onSubmit()">
+    <p>Forms</p>
+    <div class="form-group">
+        <label>Full Name</label>
+        <input type="text" formControlName="fullname" class="form-control"/>
+    </div>
+    <div class="form-group">
+        <h5>Skills</h5>
+        <div formArrayName="skills">
+            <div *ngFor="let skill of skills.controls; let i=index">
+                <div [formGroupName]="i">
+                    {{i}} Skill Name 
+                    <div class="row">
+                        <div class="col-4">
+                            <input type="text" formControlName="skill" class="form-control"/>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" formControlName="exp" class="form-control"/>
+                        </div>
+                        <div class="col-4">
+                            <button (click)="removeSkill(i)" class="btn btn-danger">Remove Item</button>
+                        </div>
+                    </div>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <button (click)="addSkills()" class="btn btn-primary">Add Skill</button>
+    </div>    
+    <div class="mt-2">
+        <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+</form>
