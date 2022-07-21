@@ -1,0 +1,14 @@
+<p>complifecycle works!</p>
+<h1>Counter : {{count}}</h1>
+<button (click)="onClickHandler()">Click</button>
+
+
+<div class="form-group">
+    <label></label>
+    <input type="text" class="form-control" value="test" #inputFullName/>
+</div>
+
+<button (click)="onRemoveChild()">Remove Child</button>
+<div>
+    <app-complcdetails [propcounter]="count" *ngIf="ChildShow"></app-complcdetails>
+</div>
