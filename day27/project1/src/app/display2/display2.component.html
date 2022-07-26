@@ -1,0 +1,18 @@
+<div>
+    <table class="table">
+        <thead>
+            <th>Id</th>
+            <th>Client Name</th>
+            <th>Address</th>
+            <th>City</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let client of ClientsData | async">
+                <td>{{client.id}}</td>
+                <td>{{client.clientname}}</td>
+                <td>{{client.address}}</td>
+                <td>{{client.city}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
