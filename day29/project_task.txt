@@ -1,0 +1,30 @@
+====================================
+Group 1
+====================================
+Omkar Divekar : driver details form
+Shilpa Ahire : add and list available vehicle
+Shrutika Mapari : add My Orders Trips  1
+Pradip Ganjale : Register Booking Self
+
+====================================
+Group 2
+====================================
+Anand : Register form 
+Amol : Login and forgot password
+Vinayak : Profile details
+
+====================================
+Group 3 : 
+====================================
+Siddhesh : New Complaint
+Akash : Contact us
+Prakhar : Dashborad
+
+
+
+
+
+
+
+
+

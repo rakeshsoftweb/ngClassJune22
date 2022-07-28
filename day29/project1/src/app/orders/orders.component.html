@@ -1,0 +1,21 @@
+<form [formGroup]="frmOrder" (ngSubmit)="onSubmit()">
+    <h5>Orders</h5>
+    <div class="form-group">
+        <label>Order No</label>
+        <input type="text" class="form-control" formControlName="orderno"/>
+    </div>
+    <div>
+        <h5>Select Product</h5>
+        <div formArrayName="Products">
+            <div *ngFor="let product of Products.controls; let i=index">
+                <div [formGroupName]="i">
+                    <input type="text" formControlName="product" class="form-control"/>
+               </div>
+            </div>
+        </div>
+        <button (click)="onAddProduct()" >Add Product</button>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-success">Submit</button>
+    </div>
+</form>

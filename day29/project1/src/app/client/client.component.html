@@ -1,0 +1,8 @@
+<ul>
+    <li *ngFor="let client of clientData">
+        
+        <a [routerLink]="['/client/clientdet',client.id]">{{client.clientname}}</a>
+    </li>
+</ul>    
+
+<router-outlet></router-outlet>

@@ -1,0 +1,42 @@
+{
+  "clients": [
+    {
+      "id": 1,
+      "clientname": "ABC 1 Pvt Ltd",
+      "address": "Plot No.123",
+      "city": "Pune"
+    },
+    {
+      "id": 2,
+      "clientname": "ABC 2 Pvt Ltd",
+      "address": "Plot-123",
+      "city": "New Delhi"
+    },
+    {
+      "id":3,
+      "clientname": "ABC 3 Pvt Ltd",
+      "address": "Plot-123",
+      "city": "Pune"
+    }
+  ],
+  "Users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin1",
+      "status": "Active"
+    },
+    {
+      "id": 2,
+      "username": "user2",
+      "password": "pwd2",
+      "status": "Active"
+    },
+    {
+      "id": 3,
+      "username": "user3",
+      "password": "pwd3",
+      "status": "Disabled"
+    }
+  ]
+}
