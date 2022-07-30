@@ -1,0 +1,35 @@
+<div>
+    <h5>Signup</h5>
+    <form [formGroup]="frmSignUp" (ngSubmit)="onSubmit()">
+        <div>
+            <select formControlName="RoleAssigned">
+                <option *ngFor="let roles of Roles">{{roles}}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>User Id</label>
+            <input type="text" class="form-control" formControlName="LoginId" />
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" formControlName="Password" />
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" class="form-control" formControlName="Mobile" />
+        </div>
+        <div class="form-group">
+            <label>Country : </label>
+            <input type="radio" name="Country" value="India" formControlName="Country" /><span>India</span>
+            <input type="radio" name="Country" value="USA" formControlName="Country" /><span>USA</span>
+            <input type="radio" name="Country" value="UK" formControlName="Country" /><span>UK</span>
+        </div>
+        <div class="form-group">
+            <label>Terms and Condition</label>
+            <input type="checkbox" formControlName="TC" />           
+        </div>
+        <div>
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </form>    
+</div>

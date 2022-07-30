@@ -1,0 +1,55 @@
+<div>
+    <h5>Education</h5>
+    <form [formGroup]="frmEducation" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label>Name</label>
+            <input type="text" class="form-control" formControlName="studname" />
+        </div>
+        <div class="form-group">
+            <label>Mobile</label>
+            <input type="text" class="form-control" formControlName="mobile" />
+        </div>
+        <div class="form-group">
+            <label>Gender</label>
+            <input type="radio" name="gender" value="male" formControlName="gender" /><span>Male</span>
+            <input type="radio" name="gender" value="female" formControlName="gender" /><span>Female</span>
+        </div>
+      
+        <div class="form-group">
+            <label>Education</label>
+           <select formControlName="education">
+                <option *ngFor="let edudata of EducationData">{{edudata}}</option>
+           </select>
+        </div>
+        <div class="form-group">
+            <label>Course Complete : Dot Net</label>
+            <input type="checkbox" name="dotnet" [checked]="dotnet" (change)="onChangeCourse($event)"/>
+            <label>Angular</label>           
+            <input type="checkbox" name="angular" [checked]="angular" (change)="onChangeCourse($event)"/>           
+        </div>
+        <div>
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </form>    
+</div>
+
+<div>
+    <table class="table">
+        <thead>
+            <th>Student Name</th>
+            <th>Mobile</th>
+            <th>Gender</th>
+            <th>Education</th>
+            <th>Course</th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let stud of StudentsData">
+                <td>{{stud.studname}}</td>
+                <td>{{stud.mobile}}</td>
+                <td>{{stud.gender}}</td>
+                <td>{{stud.education}}</td>
+                <td>{{stud.course}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
